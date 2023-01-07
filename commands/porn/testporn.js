@@ -1,15 +1,15 @@
 const neko = require("nekos-fun")
 const { MessageEmbed } = require('discord.js');
 module.exports = {
-    name: "boobs",
-    aliases: ['bubs'],
+    name: "blowjob",
+    aliases: ['blj'],
     
     async execute(client, message, args) {
-        const url = await neko.nsfw.boobs()
+        const url = await neko.nsfw.blowjob()
 
         const exampleEmbed = new MessageEmbed()
             .setColor('RANDOM')
-            .setTitle("Boobs")
+            .setTitle("Blowjob")
             .setImage(url)
 
 

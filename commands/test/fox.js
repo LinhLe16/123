@@ -1,23 +1,28 @@
-const neko = require("nekos-fun")
+const randomFox = require('random-fox-img');
+
 const { MessageEmbed } = require('discord.js');
 module.exports = {
-    name: "boobs",
-    aliases: ['bubs'],
+    name: "fox",
+    aliases: ['fox'],
     
     async execute(client, message, args) {
-        const url = await neko.nsfw.boobs()
 
+
+        const res = await randomFox();
+        const img = res.data.message
+      
+    
         const exampleEmbed = new MessageEmbed()
             .setColor('RANDOM')
-            .setTitle("Boobs")
-            .setImage(url)
+            
+            .setImage(img)
 
 
-        if (message.channel.nsfw){
+        
             
              message.reply({embeds: [exampleEmbed]})
-        }
-        else return message.reply({content:"vo nsfw di nhoc"})
+      
+        
         
         
     }
